@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/estilo.css">
+  <link rel="stylesheet" href="css/form.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <title>Cadastro</title>
+</head>
+
+  <body>    
+    
+        <b><h2>Levron Cars</h2><br></b>
+          
+  <form>
+   
+    <fieldset id="cadastro"> 
+      <legend>CADASTRE-SE</legend>
+            <div class="form-group"> <label for="form16">Nome e sobrenome</label> <input type="text" class="form-control" id="nome" placeholder="Ex: Jose das Couves"> </div>
+            <div class="form-group"> <label for="form17">CPF:</label> <input type="text" class="form-control" id="cpf" placeholder="Ex: 12345678912"> </div>
+            <div class="form-group"> <label for="form17">Telefone:</label> <input type="text" class="form-control" id="fone" placeholder="Ex: (99) 99999-9999"> </div>
+            <div class="form-group"> <label for="form18">E-mail:</label> <input type="email" class="form-control" id="email" placeholder="Ex: josedascouves@gmail.com"> </div>
+            <div class="form-group"> <label for="form18">País:</label> <input type="text" class="form-control" id="pais"> </div>
+            <div class="form-group"> <label for="form18">Cidade:</label> <input type="text" class="form-control" id="cidade"> </div>
+            <div class="form-row">
+              <div class="form-group col-md-6"> <label for="form19">Senha</label> <input type="password" class="form-control" id="senha1" placeholder="********"> </div>
+              <div class="form-group col-md-6"> <label for="form20">Confirmar Senha</label> <input type="password" class="form-control" id="senha2" placeholder="********"> </div>
+            </div>
+            <input type="button" value="Criar cadastro" class="btn btn-primary" id="btn-cadastrar">
+         </fieldset>
+          </form>
+      
+          <nav id="menu">
+          
+            <ul type="circle">	
+              <li><a href="index.html">Home</a></li>
+              <li> <a href="shop.html"> Shop</a></li>
+              <li><a href="fale-conosco.html"> Fale conosco</a></li>
+              <li><a href="login.html"> Logar</a></li>
+            </ul>
+          </nav>
+            
+  <script>
+    $('#btn-cadastrar').click(function() {
+      var senha1 = $('#senha1').val();
+      var senha2 = $('#senha2').val();
+      if (senha1 != senha2) {
+        alert('senhas nao sao iguais');
+      } else {
+        $.ajax({
+          url: 'php/controlador/criarcontacliente.php',
+          type: 'POST',
+          data: {
+            login: $("#email").val(),
+            nome: $("#nome").val(),
+            cpf: $("#cpf").val(),
+            fone: $("#fone").val(),
+            email: $("#email").val(),
+            senha: $("#senha1").val()
+          },
+          success: function(res) {
+            var id = parseInt(res);
+            if (id == -1) {
+              alert('Erro');
+            } else {
+              console.log(res);
+              alert('Cadastro realizado com sucesso!');
+              window.location.href = "loginPage.php";
+            }
+          }
+        });
+      }
+    });
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  <footer id="rodape">
+    <span style="font-weight: bold"><p>© 2021 Levroncars. All rights reserved</p><br>
+    </footer>
+</body>
+
+</html>

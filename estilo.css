@@ -1,0 +1,321 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+
+
+
+body{
+    height: 100%;
+    margin: 0;
+    font-family: Arial,sans-serif;
+    background-image:url("../imagens/arte.jpg");
+    color: rgba(255,255,255,0.8);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+
+    }
+    .shopbody{
+     
+      background-image:url("../imagens/download.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+  
+    }
+    .Geren{
+      background-image:url("../imagens/fundo.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      font-family: Arial,sans-serif;
+      height: 100%;
+      margin: 0;
+    }
+    .Geren h1{
+      font-family: 'FonteLogo',sans-serif;
+      font-size:  20pt;
+      color: gold;
+      text-align: center !important ; 
+      
+    }
+
+
+    form#anunciosForm{
+      display: inline-block;
+      position: center;
+      padding: 110px 400px 15px ;
+      text-align: center ;
+      margin: 5% 10% auto;
+      font-size: 12px;
+      box-sizing: border-box;
+      
+    
+    }
+
+    figure.foto-geren img {
+      position: center;
+      width: 1500px;
+      box-sizing: border-box;
+      
+    }
+
+    form#anunciosForm h3{
+      color:gold; 
+      display: block; 
+      text-align: right; 
+      font-size: 13.5px; 
+      margin: 3px 0 0 0; 
+      font-weight: normal;
+    }
+
+    table#tabprod{
+      display: inline-block;
+      border: 5px solid black ;
+      position: center;
+      padding: 120px 500px 20px ;
+      text-align: center ;
+     margin-left: 5%;
+     margin-right: 5%;
+      margin-top: 20%;
+      
+    }
+  
+  div#row {
+      display: inline-block;
+      width: 100%;
+      padding: 5px;
+  }
+  li {
+    text-align: -webkit-match-parent;
+}
+ul.listavertical li, ul.listahorizontal li ul.listavertical li {
+  display: inline-block;
+  position:left;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+}
+
+li.primeiro {
+  background-color: black;
+  border: 1px solid #D5D5D5;
+  padding: 0 10px 0 0;
+  margin-right: 5px;
+}
+li.lista_anuncios  {
+  width: 800px;
+  min-height: 200px;
+  margin: 10px 0 15px 0;
+  border: 5px solid black ;
+  padding: 15px 10px;
+ background-color: rgb(50 50 50 / 50%);
+  
+}
+.dados_anuncio .dados_veiculo {
+  width: 350px;
+  padding: 5px 5px 0 0;
+  float: left;
+}
+li.ultimo {
+  background-color: black;
+  border: 1px solid #D5D5D5;
+  padding: 0 10px 0 0;
+  margin-right: 5px;
+}
+
+
+ol, ul {
+  list-style: none;
+}
+ul {
+  list-style-type: disc;
+}
+html {
+  font-family: "Open Sans", Arial, Verdana, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+ .dados_anuncio {
+  margin: 10px 0px 0px;
+  position: relative;
+}
+.lista_anuncios .anuncios li.anuncio {
+  width: 732px;
+  min-height: 200px;
+  margin: 10px 0px 15px;
+  padding: 15px 10px;
+  border: 1px solid rgb(227, 227, 227);
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgb(50 50 50 / 50%) 0px 5px 5px -4px;
+}
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+.clearfix::after {
+  content: " ";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0px;
+}
+  
+    
+ header#cabecalho{
+    height: 250px;
+    background-image: "arte.jpg" ;
+    
+
+}
+header#cabecalho h1{
+    font-family: 'FonteLogo',sans-serif;
+    font-size:  110pt;
+    color: gold;
+    text-align: center !important ; 
+   
+    
+}
+
+   h2{
+    font-family: 'Titillium Web';
+    font-size: 15pt;
+    font-variant: normal;
+    color: white;
+
+}
+section#corpo {
+	display: block;
+	width:auto;
+	position: center;
+  text-align: center;
+  color:honeydew;
+  font-size: 15pt;
+  }
+section#corpo h1{
+
+  font-family: 'FonteLogo',sans-serif;
+  font-size:  25pt;
+  color: gold;
+  text-align: center !important ; 
+
+}
+
+
+h4 {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    color:white;
+  
+    font-size: 20pt;
+  }
+ 
+    @media (min-width: 576px) {
+      h4 {
+        max-width: 540px; } }
+    @media (min-width: 768px) {
+      h4 {
+        max-width: 720px; } }
+    @media (min-width: 992px) {
+      h4 {
+        max-width: 960px; } }
+    @media (min-width: 1200px) {
+      h4 {
+        max-width: 1140px; } }
+  
+  h4-fluid {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto; }
+
+    .form-inline {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center; }
+        .form-inline .form-check {
+          width: 100%; }
+        @media (min-width: 576px) {
+          .form-inline label {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 0; }
+          .form-inline .form-group {
+            display: flex;
+            flex: 0 0 auto;
+            flex-flow: row wrap;
+            align-items: center;
+            margin-bottom: 0; }
+          }
+          nav#menu{
+            display:block;
+          
+    
+          }
+          nav#menu ul{
+            list-style: none;
+            text-transform: uppercase;
+            position: absolute;
+            top: 3px;
+            left: 38%;
+          }
+          nav#menu li{
+            display: inline-block;
+            background-color:black;
+            padding: 8px; 
+            transition: background-color 0.5s;
+           
+          }
+          nav#menu li:hover {
+            background-color: #606060;
+          }
+          nav#menu h1 {
+            display: block;
+            
+          }
+          nav#menu a{
+            color:gold;
+            text-decoration: none;
+          }
+          
+          nav#menu a:hover{
+            color:gold;
+            text-decoration: underline;
+          
+          }
+          footer#rodape{
+            margin-top: 30%;
+            clear: both;
+           
+       
+    
+          
+          }
+          footer#rodape p{
+            text-align: center;
+            color:honeydew;
+
+          
+          }
+     
+          
+          
+        
+    
